@@ -1,13 +1,13 @@
 FORMAT: 1A
 HOST: https://my-joolz.nl/api/v1/
 
-# JZ Configurator
+# Joolz Configurator
 
 API to retrieve WooCommerce data for the new configurator.
 
 Host is based on for which country this configurator will be.
 
-## Models [/models/]
+## Models [/models]
 
 ### List All Models [GET]
 
@@ -23,258 +23,188 @@ for each model.
                 "models": [
                     {
                         "model": "day2",
-                        "price": 999,
-                        "sku": "500030",
-                        "collection": "Earth",
-                        "variation": [
-                            {
-                                "id": 67955,
-                                "pa_bekleding": "Hippo grey",
-                            },
-                        ],
-                        "cart_link": "/cart/?configurator=true&add-to-cart=67955&user-hash=xxx"
-                    }, {
+                        "label": "Day²",
+                        "default_variation": {
+                            "id": 67955,
+                            "name": "Joolz Day² Earth",
+                            "price": 999,
+                            "sku": "500030",
+                            "attributes": [
+                                {
+                                    "slug": "pa_bekleding",
+                                    "label": "Hippo grey"
+                                }
+                            ],
+                            "cart_link": "/cart/?configurator=true&add-to-cart=67955&user-hash=xxx"
+                        }
+                    }, 
+                    {
                         "model": "day3",
-                        "price": 999,
-                        "sku": "510030",
-                        "collection": "Earth",
-                        "variation": [
-                            {
-                                "id": 88641,
-                                "pa_bekleding-day³": "Hippo grey",
-                            }
-                        ],
-                        "cart_link": "/cart/?configurator=true&add-to-cart=88641&user-hash=xxx"
-                    }, {
+                        "label": "Day³",
+                        "default_variation": {
+                            "id": 88641,
+                            "name": "Joolz Day³ Earth",
+                            "price": 999,
+                            "sku": "510030",
+                            "attributes": [
+                                {
+                                    "slug": "pa_bekleding-day3",
+                                    "label": "Hippo grey"
+                                }
+                            ],
+                            "cart_link": "/cart/?configurator=true&add-to-cart=88641&user-hash=xxx"
+                        }
+                    }, 
+                    {
                         "model": "geo2",
-                        "price": 999,
-                        "sku": "040005",
-                        "collection": "Earth",
-                        "variation": [
-                            {
-                                "id": 74756,
-                                "pa_bekleding-earth-geo2": "Parrot blue",
-                                "pa_geo2-configuratie": "Mono",
-                            }
-                        ],
-                        "cart_link": "/cart/?configurator=true&add-to-cart=74756&user-hash=xxx"
-                    }, {
+                        "label": "Geo²",
+                        "default_variation": {
+                            "id": 74756,
+                            "name": "Joolz Geo² Earth",
+                            "price": 999,
+                            "sku": "040005",
+                            "attributes": [
+                                {
+                                    "slug": "pa_bekleding-earth-geo2",
+                                    "label": "Parrot blue"
+                                }, {
+                                    "slug": "pa_geo2-configuratie",
+                                    "label": "Mono"
+                                }
+                            ],
+                            "cart_link": "/cart/?configurator=true&add-to-cart=74756&user-hash=xxx"
+                        }
+                    }, 
+                    {
                         "model": "hub",
-                        "price": 659,
-                        "sku": "900000",
-                        "collection": "Earth",
-                        "variation": [
-                            {
-                                "id": 85903,
-                                "pa_bekleding-hub": "Hippo grey",
-                            }
-                        ],
-                        "cart_link": "/cart/?configurator=true&add-to-cart=85903&user-hash=xxx"
+                        "label": "Hub",
+                        "default_variation": {
+                            "id": 85903,
+                            "name": "Joolz Hub Earth",
+                            "price": 659,
+                            "sku": "900000",
+                            "attributes": [
+                                {
+                                    "slug": "pa_bekleding-earth-geo2",
+                                    "label": "Hippo grey"
+                                }
+                            ],
+                            "cart_link": "/cart/?configurator=true&add-to-cart=85903&user-hash=xxx"
+                        }
                     }
                 ]
             }
         ]
 
-## Collections [/collections/]
+## Variations [/models/{model}/variations]
 
-### List available collections [POST]
-
-To retrieve all available collections.
-Retrieving the collections requires 
-a JSON object containing the model slug.
-
-The API returns a list with the default
-product for each collection.
-
-+ Request (application/json)
-
-        {
-            "model": "day2"
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /collections/
-
-    + Body
-
-            {
-                "model": "day2",
-                "collections": [
-                    {
-                        "model": "day2",
-                        "collection": "Earth",
-                        "price": 999,
-                        "sku": "500030",
-                        "variation": [
-                            {
-                                "id": 67955,
-                                "pa_bekleding": "Hippo grey",
-                            },
-                        ],
-                        "cart_link": "/cart/?configurator=true&add-to-cart=67955&user-hash=xxx"
-                    }, {
-                        "model": "day2",
-                        "collection": "Quadro",
-                        "price": 1099,
-                        "sku": "500500",
-                        "variation": [
-                            {
-                                "id": 67983,
-                                "pa_bekleding": "Blu2",
-                            },
-                        ],
-                        "cart_link": "/cart/?configurator=true&add-to-cart=67983&user-hash=xxx"
-                    }, {
-                        "model": "day2",
-                        "collection": "Studio",
-                        "price": 1099,
-                        "sku": "500530",
-                        "variation": [
-                            {
-                                "id": 67980,
-                                "pa_bekleding": "Gris",
-                            },
-                        ],
-                        "cart_link": "/cart/?configurator=true&add-to-cart=67980&user-hash=xxx"
-                    }, {
-                        "model": "day2",
-                        "collection": "Tailor",
-                        "price": 1399,
-                        "sku": "COMB_570000_570002_570010_570114",
-                        "variation": [
-                            {
-                                "id": 75235,
-                                "pa_bekleding-tailor-day2": "Grey",
-                                "pa_chassis-tailor-day2": "Silver",
-                                "pa_wielen-day2": "Silver",
-                                "pa_accent-tailor-day2": "Emerald green",
-                            },
-                        ],
-                        "cart_link": "/cart/?configurator=true&add-to-cart=75235&user-hash=xxx"
-                    }
-                ]
-            }
-        
-
-## Variations [/variations/]
-
-### List available variations [POST]
+### List available variations [GET]
 
 To retrieve all available variations.
 Retrieving the variations requires 
-a JSON object containing the model slug
-and collection name.
+the model slug.
 
-+ Request (application/json)
++ Parameters
+
+    + model - Model identifier e.g. day2
+
++ Response 200 (application/json)
 
         {
             "model": "day2",
-            "collection": "Earth"
+            "variations": [
+                {
+                    "id": 67955,
+                    "name": "Joolz Day² Earth",
+                    "price": 999,
+                    "sku": "500030",
+                    "attributes": [
+                        {
+                            "pa_bekleding": "Hippo grey"   
+                        }
+                    ],
+                    "cart_link": "/cart/?configurator=true&add-to-cart=67955&user-hash=xxx"
+                },
+                {
+                    "id": 67952,
+                    "name": "Joolz Day² Earth",
+                    "price": 999,
+                    "sku": "500020",
+                    "attributes": [
+                        {
+                            "pa_bekleding": "Camel beige"
+                        }
+                    ],
+                    "cart_link": "/cart/?configurator=true&add-to-cart=67952&user-hash=xxx"
+                },
+                {
+                    "id": 67953,
+                    "name": "Joolz Day² Earth",
+                    "price": 999,
+                    "sku": "500000",
+                    "attributes": [
+                        {
+                            "pa_bekleding": "Parrot blue"
+                        }
+                    ],
+                    "cart_link": "/cart/?configurator=true&add-to-cart=67953&user-hash=xxx"
+                },
+                {
+                    "id": 67954,
+                    "name": "Joolz Day² Earth",
+                    "price": 999,
+                    "sku": "500010",
+                    "attributes": [
+                        {
+                            "pa_bekleding": "Elephant grey"
+                        }
+                    ],
+                    "cart_link": "/cart/?configurator=true&add-to-cart=67954&user-hash=xxx"
+                },
+                {
+                    "id": 67755,
+                    "name": "Joolz Day² Studio",
+                    "price": 1099,
+                    "sku": "500099",
+                    "attributes": [
+                        {
+                            "pa_bekleding": "Graphite grey"
+                        }
+                    ],
+                    "cart_link": "/cart/?configurator=true&add-to-cart=67755&user-hash=xxx"
+                }
+            ]
         }
 
-+ Response 201 (application/json)
+## Product [/products/{id}]
 
-    + Headers
-
-            Location: /variations/
-
-    + Body
-
-            {
-                "model": "day2",
-                "collection": "Earth",
-                "variations": [
-                    {
-                        "model": "day2",
-                        "collection": "Earth",
-                        "price": 999,
-                        "sku": "500030",
-                        "variation": [
-                            {
-                                "id": 67955,
-                                "pa_bekleding": "Hippo grey",
-                            },
-                        ],
-                        "cart_link": "/cart/?configurator=true&add-to-cart=67955&user-hash=xxx"
-                    },{
-                        "model": "day2",
-                        "collection": "Earth",
-                        "price": 999,
-                        "sku": "500020",
-                        "variation": [
-                            {
-                                "id": 67952,
-                                "pa_bekleding": "Camel beige",
-                            },
-                        ],
-                        "cart_link": "/cart/?configurator=true&add-to-cart=67952&user-hash=xxx"
-                    },{
-                        "model": "day2",
-                        "collection": "Earth",
-                        "price": 999,
-                        "sku": "500000",
-                        "variation": [
-                            {
-                                "id": 67953,
-                                "pa_bekleding": "Parrot blue",
-                            },
-                        ],
-                        "cart_link": "/cart/?configurator=true&add-to-cart=67953&user-hash=xxx"
-                    },{
-                        "model": "day2",
-                        "collection": "Earth",
-                        "price": 999,
-                        "sku": "500010",
-                        "variation": [
-                            {
-                                "id": 67954,
-                                "pa_bekleding": "Elephant grey",
-                            },
-                        ],
-                        "cart_link": "/cart/?configurator=true&add-to-cart=67955&user-hash=xxx"
-                    }
-                ]
-            }
-
-
-## Product [/product/]
-
-### Retrieve single variation (aka product) [POST]
+### Retrieve single variation (aka product) [GET]
 
 To retrieve a single product.
 Retrieving a single product requires 
-a JSON object containing the model slug,
-collection name and product ID.
+the product id
 
-+ Request (application/json)
++ Parameters
+        
+    + id - The ID of the product
+
++ Response 200 (application/json)
 
         {
             "model": "day2",
-            "collection": "Earth",
-            "id": 67955
+            "variation": [
+                {
+                    "id": 67955,
+                    "name": "Joolz Day² Earth",
+                    "price": 999,
+                    "sku": "500030",
+                    "attributes": [
+                        {
+                            "slug": "pa_bekleding",
+                            "label": "Hippo grey"
+                        }
+                    ],
+                    "cart_link": "/cart/?configurator=true&add-to-cart=67955&user-hash=xxx"
+                },
+            ]
         }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /product/
-
-    + Body
-
-            {
-                "model": "day2",
-                "collection": "Earth",
-                "price": 999,
-                "sku": "500030",
-                "variation": [
-                    {
-                        "id": 67955,
-                        "pa_bekleding": "Hippo grey",
-                    },
-                ],
-                "cart_link": "/cart/?configurator=true&add-to-cart=67955&user-hash=xxx"
-            }
