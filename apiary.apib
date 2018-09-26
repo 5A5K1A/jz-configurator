@@ -22,7 +22,7 @@ for each model.
             {
                 "models": [
                     {
-                        "model": "day2",
+                        "id": 1,
                         "label": "Day²",
                         "default_variation": {
                             "id": 67955,
@@ -39,7 +39,7 @@ for each model.
                         }
                     }, 
                     {
-                        "model": "day3",
+                        "id": 2,
                         "label": "Day³",
                         "default_variation": {
                             "id": 88641,
@@ -56,7 +56,7 @@ for each model.
                         }
                     }, 
                     {
-                        "model": "geo2",
+                        "id": 3,
                         "label": "Geo²",
                         "default_variation": {
                             "id": 74756,
@@ -76,7 +76,7 @@ for each model.
                         }
                     }, 
                     {
-                        "model": "hub",
+                        "id": 4,
                         "label": "Hub",
                         "default_variation": {
                             "id": 85903,
@@ -96,22 +96,21 @@ for each model.
             }
         ]
 
-## Variations [/models/{model}/variations]
+## Variations [/models/{id}/variations]
 
 ### List available variations [GET]
 
 To retrieve all available variations.
 Retrieving the variations requires 
-the model slug.
+the model ID.
 
 + Parameters
 
-    + model - Model identifier e.g. day2
+    + id - The ID of the model
 
 + Response 200 (application/json)
 
         {
-            "model": "day2",
             "variations": [
                 {
                     "id": 67955,
@@ -175,36 +174,62 @@ the model slug.
                 }
             ]
         }
+        
+## Accessories [/models/{id}/accessories]
 
-## Product [/products/{id}]
+### List available accessories [GET]
 
-### Retrieve single variation (aka product) [GET]
-
-To retrieve a single product.
-Retrieving a single product requires 
-the product id
+To retrieve all available accessories.
+Retrieving the accessories requires 
+the model ID.
 
 + Parameters
-        
-    + id - The ID of the product
 
+    + id - The ID of the model
+    
 + Response 200 (application/json)
 
         {
-            "model": "day2",
-            "variation": [
+            "accessories": [
                 {
-                    "id": 67955,
-                    "name": "Joolz Day² Earth",
-                    "price": 999,
-                    "sku": "500030",
-                    "attributes": [
+                    "id": 1234,
+                    "name": "Joolz Bekerhouder",
+                    "sku": "50121",
+                    "price": 29.95,
+                    "variations": [],
+                    "cart_link": "/cart/?configurator=true&add-to-cart=1234&user-hash=xxx"
+                },
+                {
+                    "id": 1235,
+                    "name": "Joolz Slaapzak",
+                    "sku": "",
+                    "price": 0,
+                    "variations": [
                         {
-                            "slug": "pa_bekleding",
-                            "label": "Hippo grey"
+                            "id": 1236,
+                            "price": 65,
+                            "sku": "501221",
+                            "attributes": [
+                                {
+                                    "pa_bekleding": "Elephant grey"
+                                }
+                            ],
+                            "cart_link": "/cart/?configurator=true&add-to-cart=1235&user-hash=xxx"
+                        },
+                        {
+                            "id": 1237,
+                            "price": 99,
+                            "sku": "501222",
+                            "attributes": [
+                                {
+                                    "pa_bekleding": "Graphite grey"
+                                }
+                            ],
+                            "cart_link": "/cart/?configurator=true&add-to-cart=1237&user-hash=xxx"
                         }
                     ],
-                    "cart_link": "/cart/?configurator=true&add-to-cart=67955&user-hash=xxx"
-                },
+                    "cart_link": ""
+                }
+                
             ]
         }
