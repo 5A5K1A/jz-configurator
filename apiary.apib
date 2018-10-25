@@ -22,91 +22,88 @@ for each model.
             {
                 "models": [
                     {
-                        "id": 1,
-                        "label": "Day²",
-                        "default_variation": {
-                            "id": 67955,
-                            "name": "Joolz Day² Earth",
-                            "price": 999,
-                            "sku": "500030",
-                            "attributes": [
-                                {
-                                    "slug": "pa_bekleding",
-                                    "label": "Hippo grey"
-                                }
-                            ],
-                            "cart_link": "/cart/?configurator=true&add-to-cart=67955&user-hash=xxx"
-                        }
-                    }, 
+                        "id": 4,
+                        "label": "Hub",
+                        "products": [
+                            {
+                                "id": 121,
+                                "name": "Joolz Hub",    
+                                "customize": 0,
+                                "default": 1,
+                                "attributes": [
+                                    "pa_bekleding-hub"
+                                ]
+                            }
+                        ]
+                    },
                     {
-                        "id": 2,
+                        "id": 1,
                         "label": "Day³",
-                        "default_variation": {
-                            "id": 88641,
-                            "name": "Joolz Day³ Earth",
-                            "price": 999,
-                            "sku": "510030",
-                            "attributes": [
-                                {
-                                    "slug": "pa_bekleding-day3",
-                                    "label": "Hippo grey"
-                                }
-                            ],
-                            "cart_link": "/cart/?configurator=true&add-to-cart=88641&user-hash=xxx"
-                        }
-                    }, 
+                        "products": [
+                            {
+                                "id": 123,
+                                "name": "Joolz Day³ Looks",    
+                                "customize": 0,
+                                "default": 1,
+                                "attributes": [
+                                    "pa_bekleding"
+                                ]
+                            },
+                            {
+                                "id": 1234,
+                                "name": "Joolz Day³ Tailor",
+                                "customize": 1,
+                                "default": 0,
+                                "attributes": [
+                                    "pa_bekleding-day3",
+                                    "pa_chassis-tailor-day2",
+                                    "pa_wielen-day2",
+                                    "pa_accent-tailor-day2"
+                                ]
+                            }
+                        ]
+                    },
                     {
                         "id": 3,
                         "label": "Geo²",
-                        "default_variation": {
-                            "id": 74756,
-                            "name": "Joolz Geo² Earth",
-                            "price": 999,
-                            "sku": "040005",
-                            "attributes": [
-                                {
-                                    "slug": "pa_bekleding-earth-geo2",
-                                    "label": "Parrot blue"
-                                }, {
-                                    "slug": "pa_geo2-configuratie",
-                                    "label": "Mono"
-                                }
-                            ],
-                            "cart_link": "/cart/?configurator=true&add-to-cart=74756&user-hash=xxx"
-                        }
-                    }, 
-                    {
-                        "id": 4,
-                        "label": "Hub",
-                        "default_variation": {
-                            "id": 85903,
-                            "name": "Joolz Hub Earth",
-                            "price": 659,
-                            "sku": "900000",
-                            "attributes": [
-                                {
-                                    "slug": "pa_bekleding-earth-geo2",
-                                    "label": "Hippo grey"
-                                }
-                            ],
-                            "cart_link": "/cart/?configurator=true&add-to-cart=85903&user-hash=xxx"
-                        }
+                        "products": [
+                            {
+                                "id": 120,
+                                "name": "Joolz Geo² Looks",    
+                                "customize": 0,
+                                "default": 1,
+                                "attributes": [
+                                    "pa_bekleding-geo2"
+                                ]
+                            },
+                            {
+                                "id": 1232,
+                                "name": "Joolz Geo² Tailor",
+                                "customize": 1,
+                                "default": 0,
+                                "attributes": [
+                                    "pa_bekleding-geo2",
+                                    "pa_chassis-tailor-geo2",
+                                    "pa_wielen-geo2",
+                                    "pa_accent-tailor-geo2"
+                                ]
+                            }
+                        ]
                     }
                 ]
             }
         ]
 
-## Variations [/models/{id}/variations]
+## Variations [/products/{id}/variations]
 
 ### List available variations [GET]
 
-To retrieve all available variations.
-Retrieving the variations requires 
-the model ID.
+To retrieve all available variations for a product.
+Retrieving the variations requires the product ID.
 
 + Parameters
 
-    + id - The ID of the model
+    + id - The ID of the product
 
 + Response 200 (application/json)
 
@@ -114,7 +111,7 @@ the model ID.
             "variations": [
                 {
                     "id": 67955,
-                    "name": "Joolz Day² Earth",
+                    "name": "Joolz Day³ Hippo grey",
                     "price": 999,
                     "sku": "500030",
                     "attributes": [
@@ -126,7 +123,7 @@ the model ID.
                 },
                 {
                     "id": 67952,
-                    "name": "Joolz Day² Earth",
+                    "name": "Joolz Day³ Camel Beige",
                     "price": 999,
                     "sku": "500020",
                     "attributes": [
@@ -138,7 +135,7 @@ the model ID.
                 },
                 {
                     "id": 67953,
-                    "name": "Joolz Day² Earth",
+                    "name": "Joolz Day³ Parrot Blue",
                     "price": 999,
                     "sku": "500000",
                     "attributes": [
@@ -150,7 +147,7 @@ the model ID.
                 },
                 {
                     "id": 67954,
-                    "name": "Joolz Day² Earth",
+                    "name": "Joolz Day³ Elephant grey",
                     "price": 999,
                     "sku": "500010",
                     "attributes": [
@@ -162,7 +159,7 @@ the model ID.
                 },
                 {
                     "id": 67755,
-                    "name": "Joolz Day² Studio",
+                    "name": "Joolz Day³ Graphite grey",
                     "price": 1099,
                     "sku": "500099",
                     "attributes": [
@@ -204,6 +201,9 @@ the model ID.
                     "name": "Joolz Slaapzak",
                     "sku": "",
                     "price": 0,
+                    "attributes": [
+                        "pa_bekleding"
+                    ],
                     "variations": [
                         {
                             "id": 1236,
