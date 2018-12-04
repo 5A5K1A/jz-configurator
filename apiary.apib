@@ -11,10 +11,9 @@ Host is based on for which country this configurator will be.
 
 ### List All Models [GET]
 
-To retrieve all available models.
+Retrieve all available models and products.
 
-The API returns a list with the default product
-for each model.
+#### Please note: The Joolz Day³ Tailor only returns 4 values for the 'Accent' attribute in the example response. In reality there are 20.
 
 + Response 200 (application/json)
 
@@ -31,7 +30,30 @@ for each model.
                                 "customize": 0,
                                 "default": 1,
                                 "attributes": [
-                                    "pa_bekleding-hub"
+                                    {
+                                        "identifier": "fabric",
+                                        "label": "Bekleding",
+                                        "values": [
+                                            {
+                                                "identifier": "parrot-blue",
+                                                "label": "Parrot Blue",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Online-Joolz-Website-Colour-Swatches-images-Parrot-blue-80.png",
+                                            },
+                                            {
+                                                "identifier": "hippo-grey",
+                                                "label": "Hippy Grey",
+                                                "default": 1,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Online-Joolz-Website-Colour-Swatches-images-Hippo-grey-80.png",
+                                            },
+                                            {
+                                                "identifier": "nero",
+                                                "label": "Nero",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Online-Joolz-Website-Colour-Swatches-images-Nero-80.png",
+                                            }
+                                        ]
+                                    }
                                 ]
                             }
                         ]
@@ -46,7 +68,66 @@ for each model.
                                 "customize": 0,
                                 "default": 1,
                                 "attributes": [
-                                    "pa_bekleding"
+                                    {
+                                        "identifier": "fabric",
+                                        "label": "Bekleding",
+                                        "values": [
+                                            {
+                                                "identifier": "parrot-blue",
+                                                "label": "Parrot Blue",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Day3-Attribute-Earth-Parrot-blue.png"
+                                            },
+                                            {
+                                                "identifier": "hippo-grey",
+                                                "label": "Hippy Grey",
+                                                "default": 1,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Day3-Attribute-Earth-Hippo-Grey.png"
+                                            },
+                                            {
+                                                "identifier": "elephant-grey",
+                                                "label": "Elephant Grey",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Day3-Attribute-Earth-Elephant-grey.png"
+                                            },
+                                            {
+                                                "identifier": "camel-beige",
+                                                "label": "Camel Beige",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Day3-Attribute-Earth-Camel-beige-1-1.png"
+                                            },
+                                            {
+                                                "identifier": "amazing-grey",
+                                                "label": "Amazing Grey",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Online-Joolz-Website-Colour-Swatches-images-Amazing-grey-80.png"
+                                            },
+                                            {
+                                                "identifier": "graphite-grey",
+                                                "label": "Graphite Grey",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Online-Joolz-Website-Colour-Swatches-images-Graphite-grey-80.png"
+                                            },
+                                            {
+                                                "identifier": "midnight-blue",
+                                                "label": "Midnight Blue",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Online-Joolz-Website-Colour-Swatches-images-Midnight-Blue-80-1.png"
+                                            },
+                                            {
+                                                "identifier": "grigio-nuovo",
+                                                "label": "Grigio Nuovo",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Online-Joolz-Website-Colour-Swatches-images-Grigio-nuovo-80.png"
+                                            },
+                                            {
+                                                "identifier": "nero",
+                                                "label": "Nero",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Online-Joolz-Website-Colour-Swatches-images-Nero-80.png"
+                                            }
+                                        ]
+                                    }
                                 ]
                             },
                             {
@@ -55,37 +136,96 @@ for each model.
                                 "customize": 1,
                                 "default": 0,
                                 "attributes": [
-                                    "pa_bekleding-day3",
-                                    "pa_chassis-tailor-day2",
-                                    "pa_wielen-day2",
-                                    "pa_accent-tailor-day2"
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "id": 3,
-                        "label": "Geo²",
-                        "products": [
-                            {
-                                "id": 120,
-                                "name": "Joolz Geo² Looks",    
-                                "customize": 0,
-                                "default": 1,
-                                "attributes": [
-                                    "pa_bekleding-geo2"
-                                ]
-                            },
-                            {
-                                "id": 1232,
-                                "name": "Joolz Geo² Tailor",
-                                "customize": 1,
-                                "default": 0,
-                                "attributes": [
-                                    "pa_bekleding-geo2",
-                                    "pa_chassis-tailor-geo2",
-                                    "pa_wielen-geo2",
-                                    "pa_accent-tailor-geo2"
+                                    {
+                                        "identifier": "fabric",
+                                        "label": "Bekleding",
+                                        "values": [
+                                            {
+                                                "identifier": "grey",
+                                                "label": "Grey",
+                                                "default": 1,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Attribute-Collections-Website-Fabric-0001-Grey-2.png"
+                                            },
+                                            {
+                                                "identifier": "black",
+                                                "label": "Black",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Attribute-Collections-Website-Fabric-0003-Black-2.png"
+                                            },
+                                            {
+                                                "identifier": "silver",
+                                                "label": "Silver",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Attribute-Collections-Website-Fabric-0003-Silver-2.png"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "identifier": "chassis",
+                                        "label": "Chassis",
+                                        "values": [
+                                            {
+                                                "identifier": "black",
+                                                "label": "Black",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Attribute-Collections-Website-Chassis-0002-Black-2.png"
+                                            },
+                                            {
+                                                "identifier": "silver",
+                                                "label": "Silver",
+                                                "default": 1,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Attribute-Collections-Website-Chassis-0001-Silver-2.png"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "identifier": "wheel-color",
+                                        "label": "Wielen",
+                                        "values": [
+                                            {
+                                                "identifier": "black",
+                                                "label": "Black",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Attribute-Collections-Website-Wheels-Black-2.png"
+                                            },
+                                            {
+                                                "identifier": "silver",
+                                                "label": "Silver",
+                                                "default": 1,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Attribute-Collections-Website-Wheels-Silver-2.png"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "identifier": "accent",
+                                        "label": "Accent",
+                                        "values": [
+                                            {
+                                                "identifier": "angel-blue",
+                                                "label": "Angel Blue",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Attribute-Collections-Website-Pushchairs-00000-Angel-blue-1.png"
+                                            },
+                                            {
+                                                "identifier": "emerald-green",
+                                                "label": "Emerald Green",
+                                                "default": 1,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Attribute-Collections-Website-Pushchairs-00013-Emerald-green-1.png"
+                                            },
+                                            {
+                                                "identifier": "tango-red",
+                                                "label": "Tango Red",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Attribute-Collections-Website-Pushchairs-00020-Tango-red-2.png"
+                                            },
+                                            {
+                                                "identifier": "tangerine-tango",
+                                                "label": "Tangerine Tango",
+                                                "default": 0,
+                                                "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Attribute-Collections-Website-Pushchairs-00019-Tangerine-tango-2.png"
+                                            }
+                                        ]
+                                    }
                                 ]
                             }
                         ]
@@ -94,82 +234,25 @@ for each model.
             }
         ]
 
-## Variations [/products/{id}/variations]
+## Variations [/variations/{attributes}]
 
-### List available variations [GET]
+### Get variation [GET]
 
-To retrieve all available variations for a product.
-Retrieving the variations requires the product ID.
+Retrieve a variation by attribute values.
 
 + Parameters
 
-    + id - The ID of the product
+    + attributes - The attributes of the variation.<br/>Format: attribute-identifier:value-identifier,attribute-identiefer:value-identifier<br/>Example: fabric:black,chassis:silver,wheel-color:black,accent:emerald-green
 
 + Response 200 (application/json)
 
         {
-            "variations": [
-                {
-                    "id": 67955,
-                    "name": "Joolz Day³ Hippo grey",
-                    "price": 999,
-                    "sku": "500030",
-                    "attributes": [
-                        {
-                            "pa_bekleding": "Hippo grey"   
-                        }
-                    ],
-                    "cart_link": "/cart/?configurator=true&add-to-cart=67955&user-hash=xxx"
-                },
-                {
-                    "id": 67952,
-                    "name": "Joolz Day³ Camel Beige",
-                    "price": 999,
-                    "sku": "500020",
-                    "attributes": [
-                        {
-                            "pa_bekleding": "Camel beige"
-                        }
-                    ],
-                    "cart_link": "/cart/?configurator=true&add-to-cart=67952&user-hash=xxx"
-                },
-                {
-                    "id": 67953,
-                    "name": "Joolz Day³ Parrot Blue",
-                    "price": 999,
-                    "sku": "500000",
-                    "attributes": [
-                        {
-                            "pa_bekleding": "Parrot blue"
-                        }
-                    ],
-                    "cart_link": "/cart/?configurator=true&add-to-cart=67953&user-hash=xxx"
-                },
-                {
-                    "id": 67954,
-                    "name": "Joolz Day³ Elephant grey",
-                    "price": 999,
-                    "sku": "500010",
-                    "attributes": [
-                        {
-                            "pa_bekleding": "Elephant grey"
-                        }
-                    ],
-                    "cart_link": "/cart/?configurator=true&add-to-cart=67954&user-hash=xxx"
-                },
-                {
-                    "id": 67755,
-                    "name": "Joolz Day³ Graphite grey",
-                    "price": 1099,
-                    "sku": "500099",
-                    "attributes": [
-                        {
-                            "pa_bekleding": "Graphite grey"
-                        }
-                    ],
-                    "cart_link": "/cart/?configurator=true&add-to-cart=67755&user-hash=xxx"
-                }
-            ]
+            "id": 67755,
+            "name": "Joolz Day³ Tailor Bekleding: Black, Chassis: Silver, Wielen: Black, Accent: Emerald Green",
+            "price": 1099,
+            "sku": "500099",
+            "ean": "XXXXXXXXXXXX",
+            "cart_link": "/cart/?configurator=true&add-to-cart=67755&user-hash=xxx"
         }
         
 ## Accessories [/models/{id}/accessories]
@@ -202,7 +285,7 @@ the model ID.
                     "sku": "",
                     "price": 0,
                     "attributes": [
-                        "pa_bekleding"
+                        "fabric"
                     ],
                     "variations": [
                         {
@@ -211,7 +294,7 @@ the model ID.
                             "sku": "501221",
                             "attributes": [
                                 {
-                                    "pa_bekleding": "Elephant grey"
+                                    "fabric": "Elephant grey"
                                 }
                             ],
                             "cart_link": "/cart/?configurator=true&add-to-cart=1235&user-hash=xxx"
@@ -222,7 +305,7 @@ the model ID.
                             "sku": "501222",
                             "attributes": [
                                 {
-                                    "pa_bekleding": "Graphite grey"
+                                    "fabric": "Graphite grey"
                                 }
                             ],
                             "cart_link": "/cart/?configurator=true&add-to-cart=1237&user-hash=xxx"
