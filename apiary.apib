@@ -19,7 +19,7 @@ Retrieve all available models and products.
 
         [
             {
-                "id": 4,
+                "identifier": "hub",
                 "label": "Hub",
                 "description": "Something about the Hub",
                 "products": [
@@ -62,7 +62,7 @@ Retrieve all available models and products.
                 ]
             },
             {
-                "id": 1,
+                "identifier": "day3",
                 "label": "Day³",
                 "description": "Something about the Day³",
                 "products": [
@@ -280,17 +280,15 @@ Retrieve a variation by attribute values.
             "in_stock": 1
         }
         
-## Accessories [/models/{id}/accessories]
+## Accessories [/models/{identifier}/accessories]
 
 ### List available accessories [GET]
 
-To retrieve all available accessories.
-Retrieving the accessories requires 
-the model ID.
+To retrieve all available accessories for given model.
 
 + Parameters
 
-    + id - The ID of the model
+    + identifier - The unique identifier of the model
     
 + Response 200 (application/json)
 
