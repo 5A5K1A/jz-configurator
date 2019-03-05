@@ -320,7 +320,8 @@ Retrieve a variation by attribute values.
             "ean": "XXXXXXXXXXXX",
             "image": "https://my-joolz.nl/url-to-image.jpg",
             "cart_link": "/cart/?configurator=true&add-to-cart=67755&user-hash=xxx",
-            "in_stock": 1
+            "in_stock": 1,
+            "stock_status": "In stock: Delivery within 2 weeks"
         }
         
 ## Accessories [/models/{identifier}/accessories]
@@ -346,7 +347,9 @@ To retrieve all available accessories for given model.
                     "price": 29.95,
                     "attributes": [],
                     "cart_link": "/cart/?configurator=true&add-to-cart=1234&user-hash=xxx"
-                    "image": "https://my-joolz.nl/url-to-image.jpg"
+                    "image": "https://my-joolz.nl/url-to-image.jpg",
+                    "in_stock": 0,
+                    "stock_status": "Out of stock: Expected on [DATE]"
                 },
                 {
                     "identifier": "joolz-footmuff",
@@ -389,7 +392,9 @@ To retrieve all available accessories for given model.
                         }
                     ],
                     "cart_link": "",
-                    "image": ""
+                    "image": "",
+                    "in_stock": 1,
+                    "stock_status": "In stock: Delivery within 5 working days"
                 }
                 
             ]
