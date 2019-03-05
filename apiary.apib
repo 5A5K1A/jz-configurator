@@ -298,12 +298,36 @@ Retrieve all available models and products.
                 ]
             }
         ]
+        
+## Products [/products/{identifier}]
 
-## Variations [/products/{identifier}/variations/{attributes}]
+### Get product [GET]
+
+Retrieve a product by identifier. Only works for products without attributes and variations.
+
++ Parameters
+
+    + identifier - The unqiue product identifier
+
++ Response 200 (application/json)
+
+        {
+            "id": 67711,
+            "name": "Joolz Cup Holder",
+            "price": 39,
+            "sku": "500199",
+            "ean": "XXXXXXXXXXXX",
+            "image": "https://my-joolz.nl/url-to-image.jpg",
+            "cart_link": "/cart/?configurator=true&add-to-cart=67711&user-hash=xxx",
+            "in_stock": 1,
+            "stock_status": "In stock: Delivery within 5 working days"
+        }
+
+## Product Variations [/products/{identifier}/variations/{attributes}]
 
 ### Get variation [GET]
 
-Retrieve a variation by attribute values.
+Retrieve a variation by product identifier and attribute values./
 
 + Parameters
 
