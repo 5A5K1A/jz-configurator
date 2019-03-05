@@ -7,6 +7,22 @@ API to retrieve WooCommerce data for the new configurator.
 
 Host is based on for which country this configurator will be.
 
+## Error response
+
+In case of an error, all endpoints will return this JSON object. The code and message will be different for each type of error.
+
+### Error response example
+
++ Response (application/json)
+
+        {
+            "code": "not_found",
+            "message": "Product not found.",
+            "data": {
+                "status": 404
+            }
+        }
+
 ## Info [/info]
 
 ### Get shop info [GET]
