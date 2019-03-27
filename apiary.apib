@@ -414,7 +414,7 @@ To retrieve all available accessories for given model.
         {
             "accessories": [
                 {
-                    "identifier": "joolz-cupholder",
+                    "identifier": 432432,
                     "external_identifier": "Accessory - Cupholder",
                     "name": "Joolz Bekerhouder",
                     "description": "Something about the Joolz Bekerhouder",
@@ -429,10 +429,90 @@ To retrieve all available accessories for given model.
                     "stock_status": "Out of stock: Expected on [DATE]"
                 },
                 {
-                    "identifier": "joolz-footmuff",
+                    "identifier": 34534,
                     "external_identifier": "Accessory - Footmuff",
                     "name": "Joolz Slaapzak",
                     "description": "Something about the Joolz Slaapzak",
+                    "features": "<strong>+ </strong>morst niet<strong>+ </strong>perfect voor flesjes &amp; tuitbekers<strong>+ </strong>geschikt voor de Joolz Hub, Day<span>², </span>Joolz Geo &amp; Joolz Geo²",
+                    "sku": "",
+                    "price": 0,
+                    "tax_label": " (incl. BTW)",
+                    "attributes": [
+                        {
+                            "identifier": "fabric",
+                            "external_identifier": "Accessory Color - Footmuff",
+                            "label": "Bekleding",
+                            "values": [
+                                {
+                                    "identifier": "parrot-blue",
+                                    "external_identifier": "footmuff_ParrotBlue",
+                                    "label": "Parrot Blue",
+                                    "default": 0,
+                                    "new": 0,
+                                    "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Online-Joolz-Website-Colour-Swatches-images-Parrot-blue-80.png"
+                                },
+                                {
+                                    "identifier": "hippo-grey",
+                                    "external_identifier": "footmuff_HippoGrey",
+                                    "label": "Hippy Grey",
+                                    "default": 1,
+                                    "new": 0,
+                                    "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Online-Joolz-Website-Colour-Swatches-images-Hippo-grey-80.png"
+                                },
+                                {
+                                    "identifier": "nero",
+                                    "external_identifier": "footmuff_Nero",
+                                    "label": "Nero",
+                                    "default": 0,
+                                    "new": 0,
+                                    "image": "https://my-joolz.nl/wp-content/uploads/2013/09/Joolz-Online-Joolz-Website-Colour-Swatches-images-Nero-80.png"
+                                }
+                            ]
+                        }
+                    ],
+                    "cart_link": "",
+                    "image": "",
+                    "in_stock": 1,
+                    "stock_status": "In stock: Delivery within 5 working days"
+                }
+                
+            ]
+        }
+        
+## Accessories [/models/{identifier}/configuration-accessories]
+
+### List available configuration accessories [GET]
+
+To retrieve all available configuration accessories for given model. These are 'highlighted' accessories like the Expandable set for Geo and the Cocoon for Hub.
+
++ Parameters
+
+    + identifier - The unique identifier of the model
+    
++ Response 200 (application/json)
+
+        {
+            "accessories": [
+                {
+                    "identifier": 1234,
+                    "external_identifier": "ExpandableSetco",
+                    "name": "Joolz Uitbreidingsset",
+                    "description": "Something about the Joolz Uitbreidingsset",
+                    "features": "<strong>+ </strong>morst niet<strong>+ </strong>perfect voor flesjes &amp; tuitbekers<strong>+ </strong>geschikt voor de Joolz Hub, Day<span>², </span>Joolz Geo &amp; Joolz Geo²",
+                    "sku": "50111",
+                    "price": 99.95,
+                    "tax_label": " (incl. BTW)",
+                    "attributes": [],
+                    "cart_link": "/cart/?configurator=true&add-to-cart=1234&user-hash=xxx"
+                    "image": "https://my-joolz.nl/url-to-image.jpg",
+                    "in_stock": 0,
+                    "stock_status": "Out of stock: Expected on [DATE]"
+                },
+                {
+                    "identifier": 3121,
+                    "external_identifier": "Joolz Hub Cocoon",
+                    "name": "Joolz Hub Cocoon",
+                    "description": "Something about the Joolz Hub Cocoon",
                     "features": "<strong>+ </strong>morst niet<strong>+ </strong>perfect voor flesjes &amp; tuitbekers<strong>+ </strong>geschikt voor de Joolz Hub, Day<span>², </span>Joolz Geo &amp; Joolz Geo²",
                     "sku": "",
                     "price": 0,
