@@ -40,20 +40,23 @@ Retrieve basic info for current shop.
 
 ### Add to cart [POST]
 
-Add given product or variation with given identifier to the cart. The success property in the return object will be 0 if the add to cart failed. For example when the product is not in stock.
+Add given product(s) and/or variation(s) with given identifier(s) to the cart. 
+The number of items succesfully added to the cart will be returned.
 
 + Request (application/json)
 
         {
-            "identifier": "897232"
+            "identifiers": [
+                "897232",
+                "192312",
+                "697212"
+            ]
         }
 
 + Response 200 (application/json)
 
         {
-            "identifier": "897232",
-            "quantity": 1,
-            "success": 1
+            "count": 3
         }
 
 ## Models [/models]
