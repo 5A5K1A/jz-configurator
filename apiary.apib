@@ -58,6 +58,29 @@ The number of items succesfully added to the cart will be returned.
         {
             "count": 3
         }
+        
+## Wishlist [/wishlist/add]
+
+### Add to wishlist [POST]
+
+Add given product(s) and/or variation(s) with given identifier(s) to the wishlist. 
+The number of items succesfully added to the wishlist will be returned.
+
++ Request (application/json)
+
+        {
+            "identifiers": [
+                "897232",
+                "192312",
+                "697212"
+            ]
+        }
+
++ Response 200 (application/json)
+
+        {
+            "count": 3
+        }
 
 ## Models [/models]
 
