@@ -41,15 +41,25 @@ Retrieve basic info for current shop.
 ### Add to cart [POST]
 
 Add given product(s) and/or variation(s) with given identifier(s) to the cart. 
+For the My Joolz Bumper Bar you can pass the bar text using the meta property.
 The number of items succesfully added to the cart will be returned.
 
 + Request (application/json)
 
         {
-            "identifiers": [
-                "897232",
-                "192312",
-                "697212"
+            "products": [
+                {
+                    "identifier": "897232"
+                },
+                {
+                    "identifier": "192312"
+                    "meta": {
+                        "custom_text": "MY TEXT"
+                    }
+                },
+                {
+                    "identifier": "697212"
+                }
             ]
         }
 
