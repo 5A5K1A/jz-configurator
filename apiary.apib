@@ -406,14 +406,17 @@ Retrieve a product by identifier. Only works for products without attributes and
             "image": "https://my-joolz.nl/url-to-image.jpg",
             "cart_link": "/cart/?configurator=true&add-to-cart=67711&user-hash=xxx",
             "in_stock": 1,
-            "stock_status": "In stock: Delivery within 5 working days"
+            "stock_status": "In stock: Delivery within 5 working days",
+            "text_color": ""
         }
 
 ## Product Variations [/products/{identifier}/variations/{attributes}]
 
 ### Get variation [GET]
 
-Retrieve a variation by product identifier and attribute values./
+Retrieve a variation by product identifier and attribute values.
+The text_color property will contain 'white' or 'black' in case
+of a My Joolz Bumper Bar variation.
 
 + Parameters
 
@@ -432,7 +435,8 @@ Retrieve a variation by product identifier and attribute values./
             "image": "https://my-joolz.nl/url-to-image.jpg",
             "cart_link": "/cart/?configurator=true&add-to-cart=67755&user-hash=xxx",
             "in_stock": 1,
-            "stock_status": "In stock: Delivery within 2 weeks"
+            "stock_status": "In stock: Delivery within 2 weeks",
+            "text_color": ""
         }
         
 ## Accessories [/models/{identifier}/accessories]
